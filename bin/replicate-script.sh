@@ -152,7 +152,7 @@ do
       l ) parameterL="$OPTARG" ;;
       f ) parameterF="$OPTARG" ;;
       d ) parameterD="$OPTARG" ;;
-      a ) parameterA="$OPTARG" ;; # new
+      a ) parameterA="$OPTARG" ;;
       ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
    esac
 done
@@ -192,10 +192,10 @@ SSH_KEY=$parameterK
 SSH_USER=$parameterL
 SSH_HOST=$parameterF
 JOB_ID=$(date -u +"%FT%H%M%S")
-LOCAL_DB_FILE_DIR=/etc/cm-scripts/replicate-script #new
+LOCAL_DB_FILE_DIR=/etc/cm-scripts/replicate-script
 
 
-# new
+# Load local database file path
 if  [ -z $parameterA ]; then
     LOCAL_DB_FILE=$LOCAL_DB_FILE_DIR/default.conf
 
